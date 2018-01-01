@@ -23,7 +23,7 @@ public class Cookie {
         init(p_CakeArray, p_nCake);
         sortCake(0);
 
-        for (int i = 0; i < m_nCake; i++) {
+        for (int i = 0; i < m_nMaxSwap; i++) {
             System.out.print(m_SwapIndex[i] + " ");
         }
     }
