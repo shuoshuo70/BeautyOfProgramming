@@ -19,7 +19,7 @@ public class Sudoku {
         for (char[] ch : sudoku) {
             Arrays.fill(ch, '.');
         }
-        sudoku[0][0] = (char) ('0' + new Random().nextInt(9));
+        sudoku[0][0] = (char) ('1' + new Random().nextInt(9));
         solve(sudoku);
         show(sudoku);
     }
