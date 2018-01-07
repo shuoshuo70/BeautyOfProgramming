@@ -25,11 +25,12 @@ public class MaxSubSum {
             } else {
                 if (i - startIndex < n) {
                     sum += arr[i];
-                    ans = Math.max(ans, sum);
                 } else {
                     break;
                 }
             }
+
+            ans = Math.max(ans, sum);
         }
 
         return ans;
