@@ -6,7 +6,7 @@ package Chapter4;
 public class CoverFloor {
     public static void main(String[] args) {
         CoverFloor solution = new CoverFloor();
-        int n = 7;
+        int n = 4;
         System.out.println(solution.getMethod1(n));
         System.out.println(solution.getMethod2(n));
     }
@@ -17,7 +17,7 @@ public class CoverFloor {
         }
 
         int[] dp = new int[n + 1];
-        dp[0] = 0;
+        dp[0] = 1;
         dp[1] = 1;
 
         for (int i = 2; i <= n; i++) {
@@ -32,7 +32,11 @@ public class CoverFloor {
             return 0;
         }
 
-        int f1 = 1, f2 = 1, f3 = 1;
+        if (n == 1) {
+            return 1;
+        }
+
+        int f1 = 1, f2 = 2, f3 = 2;
 
         for (int i = 3; i <= n; i++) {
             f3 = f1 + f2;
